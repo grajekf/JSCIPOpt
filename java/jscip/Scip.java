@@ -384,4 +384,19 @@ public class Scip
    {
       return SCIPJNI.SCIPgetObjsense(_scipptr) == SCIP_Objsense.SCIP_OBJSENSE_MINIMIZE;
    }
+
+   /** helper function for setting objective explicitly */
+   public void setObjective(Variable[] vars, Double[] vals, boolean clear) {
+      assert(vars.length == vals.length);
+
+      if(clear) {
+         for(Variable v: getVars()) {
+            SCIPJNI.SCIPchgVarObj(_scipptr, v.getPtr(), 0.0);
+         }
+      }
+
+      for(int i = 0; i < vars.length; i++) {
+         SCIPJNI.SCIPchgVarObj(_scipptr, vars[i].getPtr(), vals[i]);
+      }
+   }
 }

@@ -155,6 +155,7 @@ SCIP_RETCODE   SCIPcreateProbBasic(SCIP* scip, const char* probname);
 SCIP_RETCODE   SCIPincludeDefaultPlugins(SCIP* scip);
 SCIP_RETCODE   SCIPsolve(SCIP* scip);
 SCIP_RETCODE   SCIPaddVar(SCIP* scip, SCIP_VAR* var);
+SCIP_RETCODE   SCIPchgVarObj(SCIP* scip, SCIP_VAR* var, SCIP_Real newobj);
 int            SCIPgetNVars(SCIP* scip);
 SCIP_VAR**     SCIPgetVars(SCIP* scip);
 SCIP_RETCODE   SCIPaddCons(SCIP* scip, SCIP_CONS* cons);
