@@ -286,4 +286,16 @@ public class SCIPJNI {
     SCIPJNIJNI.releaseCons(SWIGTYPE_p_SCIP.getCPtr(scip), SWIGTYPE_p_SCIP_CONS.getCPtr(cons));
   }
 
+  public static int SCIPmajorVersion() {
+    return SCIPJNIJNI.SCIPmajorVersion();
+  }
+
+  public static int SCIPminorVersion() {
+    return SCIPJNIJNI.SCIPminorVersion();
+  }
+
+  public static int SCIPtechVersion() {
+    return SCIPJNIJNI.SCIPtechVersion();
+  }
+
 }

@@ -1858,6 +1858,42 @@ SWIGEXPORT void JNICALL Java_jscip_SCIPJNIJNI_releaseCons(JNIEnv *jenv, jclass j
 }
 
 
+SWIGEXPORT jint JNICALL Java_jscip_SCIPJNIJNI_SCIPmajorVersion(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)SCIPmajorVersion();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_jscip_SCIPJNIJNI_SCIPminorVersion(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)SCIPminorVersion();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_jscip_SCIPJNIJNI_SCIPtechVersion(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)SCIPtechVersion();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
 #ifdef __cplusplus
 }
 #endif

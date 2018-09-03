@@ -399,4 +399,9 @@ public class Scip
          SCIPJNI.SCIPchgVarObj(_scipptr, vars[i].getPtr(), vals[i]);
       }
    }
+
+   /** gets scip version as string */
+   public static String getVersion() {
+      return String.format("%d.%d.%d", SCIPJNI.SCIPmajorVersion(), SCIPJNI.SCIPminorVersion(), SCIPJNI.SCIPtechVersion());
+   }
 }
